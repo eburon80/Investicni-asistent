@@ -549,8 +549,8 @@ with tab_an:
         mc = [c for c in METHOD_COLS if c in top.columns]
         show = top[["nazev", "skore", "verdikt", "podil"] + mc + ["mom", "vol", "rsi", "dd"]].rename(columns={
             "nazev": "Název", "skore": "Skóre", "verdikt": "Signál", "podil": "Podíl %", "mom": "Výnos",
-            "vol": "Volatilita", "rsi": "RSI", "dd": "Pokles od max."})
-        fm = {"Skóre": "{:.0f}", "Podíl %": "{:.1f}", "Výnos": "{:+.1%}", "Volatilita": "{:.1%}", "RSI": "{:.0f}",
+            "vol": "Volatilita", "rsi": "RSI hodnota", "dd": "Pokles od max."})
+        fm = {"Skóre": "{:.0f}", "Podíl %": "{:.1f}", "Výnos": "{:+.1%}", "Volatilita": "{:.1%}", "RSI hodnota": "{:.0f}",
               "Pokles od max.": "{:.1%}", **{c: "{:.0f}" for c in mc}}
         st.dataframe(show.style.format(fm))
         st.caption("Podíl je vážený nepřímo úměrně volatilitě. Detail, souhrn a oscilace najdete v záložce Detail titulu.")
