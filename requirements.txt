@@ -3,3 +3,6 @@ yfinance
 pandas
 numpy
 plotly
+lxml
+requests
+anthropic
